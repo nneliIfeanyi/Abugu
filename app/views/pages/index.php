@@ -375,14 +375,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Implementing innovative strategies has revolutionized our approach to market challenges and competitive positioning.</p>
+              <p>My time at <strong>St. Mary's Poly</strong> was more than just earning a degree __ It was a journey of personal growth, leadership, and lifelong friendships.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person-f-7.webp" alt="Client">
+                  <img src="assets/img/person/user.jpg" alt="Client">
                 </div>
                 <div class="client-details">
                   <h3>Rachel Bennett</h3>
-                  <span class="position">Strategy Director</span>
+                  <span class="position">Class of 2020, HND. Computer Science.</span>
                 </div>
               </div>
             </div>
@@ -393,14 +393,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Exceptional service delivery and innovative solutions have transformed our business operations, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
+              <p>Attending <strong>St. Mary's Poly</strong> was a transformative experience. The faculty not only provided top-notch academic training but also mentored me to become a confident, purpose driven profesional.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person-m-7.webp" alt="Client">
+                  <img src="assets/img/person/user.jpg" alt="Client">
                 </div>
                 <div class="client-details">
-                  <h3>Daniel Morgan</h3>
-                  <span class="position">Chief Innovation Officer</span>
+                  <h3>Fatima K. Musa</h3>
+                  <span class="position">Class of 2016, HND Business Administration.</span>
                 </div>
               </div>
             </div>
@@ -411,68 +411,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Strategic partnership has enabled seamless digital transformation and operational excellence.</p>
+              <p>Studying at <strong>St. Mary's Poly</strong> laid the foundation for who I am today__ both professionally and personally. The lectures was engaging, the campus life was vibrant and the values instilled in me continue to guide my decisions. I'm forever grateful for the experience.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person-f-8.webp" alt="Client">
+                  <img src="assets/img/person/user.jpg" alt="Client">
                 </div>
                 <div class="client-details">
                   <h3>Emma Thompson</h3>
-                  <span class="position">Digital Lead</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Professional expertise and dedication have significantly improved our project delivery timelines and quality metrics.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Christopher Lee</h3>
-                  <span class="position">Technical Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="400">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Collaborative approach and industry expertise have revolutionized our product development cycle, resulting in faster time-to-market and increased customer engagement levels.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-9.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Olivia Carter</h3>
-                  <span class="position">Product Manager</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Innovative approach to user experience design has significantly enhanced our platform's engagement metrics and customer retention rates.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-13.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Nathan Brooks</h3>
-                  <span class="position">UX Director</span>
+                  <span class="position">Class of 2020, ND. Library Management</span>
                 </div>
               </div>
             </div>
@@ -612,15 +558,15 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="javascript:void()">🗳️ Students Elect New Student Union Executives in Peaceful Election</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
+                  <p class="post-author">Ike Victoria</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                    <time datetime="2022-01-01">Jan 1, 2025</time>
                   </p>
                 </div>
               </div>
@@ -638,13 +584,13 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="javascript:void()">🏆Inter-School Sports Competition Championship</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
+                  <p class="post-author">Monica James</p>
                   <p class="post-date">
                     <time datetime="2022-01-01">Jun 5, 2022</time>
                   </p>
@@ -664,13 +610,13 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="javascript:void()">🎓 Alumnus Receives National Award for Innovation in Education</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-m-10.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
+                  <p class="post-author">Mark Henry</p>
                   <p class="post-date">
                     <time datetime="2022-01-01">Jun 22, 2022</time>
                   </p>
@@ -697,7 +643,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="event-filters mb-4">
+        <!-- <div class="event-filters mb-4">
           <div class="row justify-content-center g-3">
             <div class="col-md-4">
               <select class="form-select">
@@ -720,7 +666,7 @@
               </select>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row g-4">
 
@@ -734,7 +680,7 @@
               <div class="event-content">
                 <div class="event-tag academic">Academic</div>
                 <h3>Science Fair Exhibition</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Our annual Science Fair Exhibition showcases the creativity and innovation of our students across various scientific disciplines. From groundbreaking experiments to real-world solutions, this event provides a platform for learners to present their research projects, engage with industry experts, and inspire a culture of curiosity and discovery.</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
@@ -763,7 +709,7 @@
               <div class="event-content">
                 <div class="event-tag sports">Sports</div>
                 <h3>Annual Sports Day</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <p>The Annual Sports Day is a vibrant celebration of athleticism, teamwork, and school spirit. Students compete in a variety of track and field events, showcasing talent, discipline, and determination. It's a day filled with excitement, friendly rivalry, and community bonding, as the entire institution comes together to cheer on their teams.</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
@@ -781,65 +727,6 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">APR</span>
-                <span class="day">22</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag arts">Arts</div>
-                <h3>Spring Music Concert</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>06:30 PM - 08:30 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Performing Arts Center</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">MAY</span>
-                <span class="day">8</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag community">Community</div>
-                <h3>Parent-Teacher Conference</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>01:00 PM - 07:00 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Various Classrooms</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div class="text-center mt-5">
