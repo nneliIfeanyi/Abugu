@@ -11,7 +11,7 @@
 
       <div class="hero-container">
         <video autoplay="" muted="" loop="" playsinline="" class="video-background">
-          <source src="assets/img/education/video-2.mp4" type="video/mp4">
+          <source src="<?php echo URLROOT; ?>/assets/img/education/hero-bg.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="container">
@@ -19,14 +19,14 @@
             <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
               <div class="hero-content">
                 <h1>Empowering Futures Through Education</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam ornare, imperdiet est eget, pretium augue. Nullam auctor felis in nibh gravida, eu viverra risus egestas.</p>
+                <p>Shaping bold thinkers and future leaders with the skills, confidence, and values they need to thrive in life through transformative learning.</p>
                 <div class="cta-buttons">
-                  <a href="#" class="btn-primary">Start Your Journey</a>
-                  <a href="#" class="btn-secondary">Discover Programs</a>
+                  <a href="<?php echo URLROOT; ?>/pages/admissions" class="btn-primary">Start Your Journey</a>
+                  <a href="#featured-programs" class="btn-secondary">Discover Programs</a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
+            <!-- <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
               <div class="stats-card">
                 <div class="stats-header">
                   <h3>Why Choose Us</h3>
@@ -71,7 +71,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -80,19 +80,19 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-md-6 col-xl-4 col-12 ticker-item">
-              <span class="date">NOV 15</span>
+              <span class="date">JAN 15</span>
               <span class="title">Open House Day</span>
-              <a href="#" class="btn-register">Register</a>
+              <!-- <a href="javascript:void()" class="btn-register">Past</a> -->
             </div>
             <div class="col-md-6 col-12 col-xl-4  ticker-item">
-              <span class="date">DEC 5</span>
+              <span class="date">APR 29</span>
               <span class="title">Application Workshop</span>
-              <a href="#" class="btn-register">Register</a>
+              <!-- <a href="javascript:void()" class="btn-register">Past</a> -->
             </div>
             <div class="col-md-6 col-12 col-xl-4 ticker-item">
-              <span class="date">JAN 10</span>
+              <span class="date">OCT 10</span>
               <span class="title">International Student Orientation</span>
-              <a href="#" class="btn-register">Register</a>
+              <!-- <a href="javascript:void()" class="btn-register">Coming Soon</a> -->
             </div>
           </div>
         </div>
@@ -107,11 +107,11 @@
 
         <div class="row mb-5">
           <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <h2 class="display-6 fw-bold mb-4">Empowering Minds, <span>Shaping Futures</span></h2>
-            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <h2 class="display-6 fw-bold mb-4">WELCOME TO, <span>ST. MARY'S POLY</span></h2>
+            <p class="lead mb-4">We are more than a place of learning __ We are a community with a focus on academic excellence, personal growth, and innovation. We create an environment where every student feels seen, supported and inspired to succeed.</p>
             <div class="d-flex flex-wrap gap-4 mb-4">
               <div class="stat-box">
-                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>+</span>
+                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>+</span>
                 <span class="stat-label">Years</span>
               </div>
               <div class="stat-box">
@@ -119,12 +119,12 @@
                 <span class="stat-label">Students</span>
               </div>
               <div class="stat-box">
-                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1" class="purecounter"></span>+</span>
+                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="55" data-purecounter-duration="1" class="purecounter"></span>+</span>
                 <span class="stat-label">Faculty</span>
               </div>
             </div>
             <div class="d-flex align-items-center mt-4 signature-block">
-              <!-- <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120"> -->
+              <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120">
               <div class="ms-3">
                 <p class="mb-0 fw-bold">Dr. Elizabeth Morgan</p>
                 <p class="mb-0 text-muted">Principal</p>
@@ -134,10 +134,10 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="image-stack">
               <div class="image-stack-item image-stack-item-top" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/img/education/campus-4.webp" alt="Campus Life" class="img-fluid rounded-4 shadow-lg">
+                <img src="assets/img/education/img-2.jpg" alt="Campus Life" class="img-fluid rounded-4 shadow-lg">
               </div>
               <div class="image-stack-item image-stack-item-bottom" data-aos="zoom-in" data-aos-delay="500">
-                <img src="assets/img/education/students-2.webp" alt="Students" class="img-fluid rounded-4 shadow-lg">
+                <img src="assets/img/education/img-1.jpg" alt="Students" class="img-fluid rounded-4 shadow-lg">
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
                 <i class="bi bi-rocket-takeoff"></i>
               </div>
               <h3>Our Mission</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.</p>
+              <p>To empower every student with knowledge, creativity, and character __ equipping them to thrive academically, grow personally, and contribute meaningfully to the world around them.</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -159,7 +159,7 @@
                 <i class="bi bi-eye"></i>
               </div>
               <h3>Our Vision</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+              <p>To be a leading educational institution recognized for nuturing a generation to grow in wisdom, character and purpose. Empowered academically to lead meaninful lives and contribute positively to a global society.</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
@@ -168,7 +168,9 @@
                 <i class="bi bi-star"></i>
               </div>
               <h3>Our Values</h3>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit.</p>
+              <p>We uphold <strong>Excellence</strong> encouraging students to reach their full potential in all areas of learning. We value <strong>Creativity</strong> inspiring innovative thinking and self-expression.
+                We promote <strong>Resilience</strong> nuturing confidence and perseverance to thrive in a changing world.
+              </p>
             </div>
           </div>
         </div>
@@ -490,11 +492,11 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="stats-overview" data-aos="fade-right" data-aos-delay="200">
-              <h2 class="stats-title">Excellence in Education for Over 50 Years</h2>
-              <p class="stats-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ultricies magna. Maecenas finibus convallis turpis, non facilisis justo egestas in. Nulla facilisi. Fusce consectetur, enim eget aliquet volutpat, lacus nulla semper velit.</p>
+              <h2 class="stats-title">Excellence in Education for Over 10 Years</h2>
+              <p class="stats-description">For over a decade, we've been dedicated to shaping bright futures through innovative teaching, strong values and a supportive learning environment. Our commitment to excellence has helped countless students grow into confident, capable individuals ready to make a difference.</p>
               <div class="stats-cta">
-                <a href="#" class="btn btn-primary">Learn More</a>
-                <a href="#" class="btn btn-outline">Virtual Tour</a>
+                <a href="javascript:void" class="btn btn-primary">Admissions</a>
+                <a href="javascript:void" class="btn btn-outline">Inquiry</a>
               </div>
             </div>
           </div>
@@ -547,7 +549,7 @@
           </div>
         </div>
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
           <div class="col-lg-12">
             <div class="achievements-gallery" data-aos="fade-up" data-aos-delay="700">
               <div class="row g-4">
@@ -581,7 +583,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -593,7 +595,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Recent News</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -604,7 +606,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-post-1.webp" alt="" class="img-fluid">
+                <img src="assets/img/education/img-1.jpg" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Politics</p>
@@ -630,7 +632,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-post-2.webp" alt="" class="img-fluid">
+                <img src="assets/img/education/img-1.jpg" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Sports</p>
@@ -656,7 +658,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-post-3.webp" alt="" class="img-fluid">
+                <img src="assets/img/education/img-1.jpg" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Entertainment</p>
@@ -690,7 +692,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Events</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">

@@ -31,4 +31,25 @@ class Pages extends Controller
     // Load about view
     $this->view('pages/about', $data);
   }
+
+  public function admissions()
+  {
+    //Set Data
+    $data = [
+      'version' => '1.0.0'
+    ];
+
+    // Load about view
+    $this->view('pages/admissions', $data);
+  }
+  public function apply()
+  {
+    //Set Data
+    $data = [
+      'version' => '1.0.0'
+    ];
+
+    // Load about view
+    $this->view('pages/apply', $data);
+  }
 }

@@ -10,18 +10,18 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="javascript:void(0);" class="active">Home</a></li>
+        <li><a href="<?php echo URLROOT; ?>/pages">Home</a></li>
         <li class="dropdown"><a href="javascript:void(0);"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="javascript:void(0);">About Us</a></li>
-            <li><a href="javascript:void(0);">Admissions</a></li>
-            <li><a href="javascript:void(0);">Academics</a></li>
+            <li><a href="<?php echo URLROOT; ?>/pages/about">About Us</a></li>
+            <li><a href="<?php echo URLROOT; ?>/pages/admissions">Admissions</a></li>
+            <!-- <li><a href="javascript:void(0);">Academics</a></li>
             <li><a href="javascript:void(0);">Faculty &amp; Staff</a></li>
-            <li><a href="javascript:void(0);">Campus &amp; Facilities</a></li>
+            <li><a href="javascript:void(0);">Campus &amp; Facilities</a></li> -->
           </ul>
         </li>
 
-        <li><a href="javascript:void(0);">Students Life</a></li>
+        <!-- <li><a href="javascript:void(0);">Students Life</a></li> -->
         <li><a href="javascript:void(0);">News</a></li>
         <li><a href="javascript:void(0);">Events</a></li>
         <li><a href="javascript:void(0);">Alumni</a></li>
