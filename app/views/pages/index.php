@@ -124,10 +124,10 @@
               </div>
             </div>
             <div class="d-flex align-items-center mt-4 signature-block">
-              <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120">
+              <!-- <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120"> -->
               <div class="ms-3">
-                <p class="mb-0 fw-bold">Dr. Elizabeth Morgan</p>
-                <p class="mb-0 text-muted">Principal</p>
+                <p class="mb-0 fw-bold">Dr. Prince Morgan</p>
+                <p class="mb-0 text-muted">Vice Chancellor</p>
               </div>
             </div>
           </div>
@@ -185,7 +185,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Featured Programs</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -199,55 +198,6 @@
           </ul>
 
           <div class="row g-4 isotope-container">
-            <div class="col-lg-6 isotope-item filter-bachelor" data-aos="zoom-in" data-aos-delay="100">
-              <div class="program-item">
-                <div class="program-badge">Bachelor's Degree</div>
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <div class="program-image-wrapper">
-                      <img src="assets/img/education/education-1.webp" class="img-fluid" alt="Program">
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="program-content">
-                      <h3>Computer Science</h3>
-                      <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i> 4 Years</span>
-                        <span><i class="bi bi-people-fill"></i> 120 Credits</span>
-                        <span><i class="bi bi-calendar3"></i> Fall &amp; Spring</span>
-                      </div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Program Item -->
-
-            <div class="col-lg-6 isotope-item filter-bachelor" data-aos="zoom-in" data-aos-delay="200">
-              <div class="program-item">
-                <div class="program-badge">Bachelor's Degree</div>
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <div class="program-image-wrapper">
-                      <img src="assets/img/education/education-3.webp" class="img-fluid" alt="Program">
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="program-content">
-                      <h3>Business Administration</h3>
-                      <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i> 3 Years</span>
-                        <span><i class="bi bi-people-fill"></i> 90 Credits</span>
-                        <span><i class="bi bi-calendar3"></i> Fall Only</span>
-                      </div>
-                      <p>Nullam sed augue a turpis bibendum cursus. Suspendisse potenti. Praesent mi diam, feugiat a tincidunt at.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Program Item -->
 
             <div class="col-lg-6 isotope-item filter-bachelor" data-aos="zoom-in" data-aos-delay="300">
               <div class="program-item">
@@ -363,7 +313,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container">

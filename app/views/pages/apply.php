@@ -21,7 +21,7 @@
         <section id="admissions" class="admissions section">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-5 g-lg-5">
-                    <div class="col-lg-8 offset-2">
+                    <div class="col-lg-8 mx-auto">
 
                         <div class="request-info" data-aos="fade-up">
                             <div class="card">

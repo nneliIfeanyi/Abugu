@@ -5,7 +5,7 @@
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <i class="bi bi-buildings"></i>
-      <h1 class="sitename">NiceSchool</h1>
+      <h1 class="sitename">ST. MARY'S</h1>
     </a>
 
     <nav id="navmenu" class="navmenu">

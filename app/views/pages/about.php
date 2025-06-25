@@ -184,7 +184,7 @@
                         <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="leader-card">
                                 <div class="leader-image">
-                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-2.webp" alt="Principal" class="img-fluid">
+                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-11.webp" alt="Principal" class="img-fluid">
                                     <div class="social-links">
                                         <a href="#"><i class="bi bi-linkedin"></i></a>
                                         <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -202,7 +202,7 @@
                         <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="leader-card">
                                 <div class="leader-image">
-                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-f-3.webp" alt="Vice Principal" class="img-fluid">
+                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-11.webp" alt="Vice Principal" class="img-fluid">
                                     <div class="social-links">
                                         <a href="#"><i class="bi bi-linkedin"></i></a>
                                         <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -220,7 +220,7 @@
                         <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                             <div class="leader-card">
                                 <div class="leader-image">
-                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-5.webp" alt="Dean of Students" class="img-fluid">
+                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-11.webp" alt="Dean of Students" class="img-fluid">
                                     <div class="social-links">
                                         <a href="#"><i class="bi bi-linkedin"></i></a>
                                         <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -238,7 +238,7 @@
                         <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                             <div class="leader-card">
                                 <div class="leader-image">
-                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-f-8.webp" alt="Academic Director" class="img-fluid">
+                                    <img src="<?php echo URLROOT; ?>/assets/img/person/person-m-11.webp" alt="Academic Director" class="img-fluid">
                                     <div class="social-links">
                                         <a href="#"><i class="bi bi-linkedin"></i></a>
                                         <a href="#"><i class="bi bi-twitter-x"></i></a>
