@@ -14,11 +14,6 @@ class Users extends Controller
 
   public function register()
   {
-    // Check if logged in
-    if ($this->isLoggedIn()) {
-      redirect('posts');
-    }
-
     // Check if POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Sanitize POST
