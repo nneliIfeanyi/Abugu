@@ -184,20 +184,20 @@ class Users extends Controller
         'phone2' => trim($_POST['phone3']),
       ];
       if ($this->userModel->register_bio_data($data)) {
-          // Redirect to login
-          flash('register_success', 'Bio Data Submitted Successfully!');
-          redirect('student');
-        } else {
-          die('Something went wrong');
-        }
+        // Redirect to login
+        flash('register_success', 'Bio Data Submitted Successfully!');
+        redirect('student');
+      } else {
+        die('Something went wrong');
+      }
     } else {
       // IF NOT A POST REQUEST
       redirect('student');
     }
-  }// End Step One
+  } // End Step One
 
 
-// Register Next Of Kin
+  // Register Next Of Kin
   public function next_kin()
   {
     // Check if POST
@@ -209,38 +209,105 @@ class Users extends Controller
         'address' => trim($_POST['address']),
       ];
       if ($this->userModel->register_next_kin($data)) {
-          // Redirect to login
-          flash('register_success', 'Next of kin submitted successfully');
-          redirect('student');
-        } else {
-          die('Something went wrong');
-        }
+        // Redirect to login
+        flash('register_success', 'Next of kin submitted successfully');
+        redirect('student');
+      } else {
+        die('Something went wrong');
+      }
     } else {
       // IF NOT A POST REQUEST
       redirect('student');
     }
-  }// End Step One
+  } // End Step One
 
-// Documents Submit
-  public function documents()
+  // Documents Submit
+  public function passport()
   {
-    // Check if POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      $data = [
-        'dob' => trim($_POST['dob']),
-        'stateOfOrigin' => trim($_POST['stateOfOrigin']),
-        'lga' => trim($_POST['lga']),
-      ];
-      if ($this->userModel->register4($data)) {
-          // Redirect to login
-          flash('register_success', 'Next of kin submitted successfully');
-          redirect('users/login');
-        } else {
-          die('Something went wrong');
+      if (is_array($_FILES)) {
+        $file = $_FILES['passport']['tmp_name'];
+        $source_properties = getimagesize($file);
+        $image_type = $source_properties[2];
+        if ($image_type == IMAGETYPE_JPEG) {
+          $image_resource_id = imagecreatefromjpeg($file);
+          $target_layer = fn_resize($image_resource_id, $source_properties[0], $source_properties[1]);
+          imagejpeg($target_layer, "images/students/" . $_FILES['passport']['name']);
+          $db_image_file =  "images/students/" . $_FILES['passport']['name'];
+          $_SESSION['passport'] = $db_image_file;
+          if ($this->userModel->register_passport($db_image_file, $_POST['id'])) {
+            // Redirect to login
+            flash('register_success', 'Passport submitted successfully');
+            redirect('student');
+          } else {
+            die('Something went wrong!');
+          }
+        } elseif ($image_type == IMAGETYPE_PNG) {
+          $image_resource_id = imagecreatefrompng($file);
+          $target_layer = fn_resize($image_resource_id, $source_properties[0], $source_properties[1]);
+          imagepng($target_layer, "images/students/" . $_FILES['passport']['name']);
+          $db_image_file =  "images/students/" . $_FILES['passport']['name'];
+          $_SESSION['passport'] = $db_image_file;
+          if ($this->userModel->register_passport($db_image_file, $_POST['id'])) {
+            // Redirect to login
+            flash('register_success', 'Passport submitted successfully');
+            redirect('student');
+          } else {
+            die('Something went wrong!');
+          }
         }
+      } // End if is_array
     } else {
-      // IF NOT A POST REQUEST
-      redirect('pages/apply');
+      //IF NOT A POST REQUEST
+      redirect('student');
     }
-  }// End Step Three
+  }
+
+  public function olevel()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // Get file details
+      $file = $_FILES['olevelDoc'];
+      $fileName = $file['name'];
+      $fileTmp = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+
+      // Get file extension
+      $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+      // Only allow PDF
+      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
+        $newFileName = uniqid('pdf_', true) . ".pdf";
+        $uploadDir = 'uploads/';
+        $uploadPath = $uploadDir . $newFileName;
+
+        // Create upload directory if not exists
+        if (!file_exists($uploadDir)) {
+          mkdir($uploadDir, 0777, true);
+        }
+
+        // Move file to uploads folder
+        if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_olevel($uploadPath, $_POST['id'])) {
+          // echo "✅ PDF uploaded successfully as: <strong>" . htmlspecialchars($newFileName) . "</strong><br>";
+          // echo "<a href='$uploadPath' target='_blank'>Download/View PDF</a>";
+          // Redirect to login
+          flash('register_success', ' Your upload is successfully');
+          redirect('student');
+        } else {
+          // Redirect to login
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          redirect('student');
+        }
+      } else {
+        //echo "❌ Invalid file type. Only PDF files are allowed.";
+        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        redirect('student');
+      }
+      // load view
+      //$this->view('users/login');
+    } else {
+      redirect('student');
+    }
+  }
 }

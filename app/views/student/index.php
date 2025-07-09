@@ -24,35 +24,12 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="tile">
-				<h4 class="tile-title">Announcements</h4>
-
+				<?php flash('register_success'); ?>
 				<div class="alert alert-dismissible alert-info">
-					<?php flash('register_success');?>
-					<strong><a href="<?php echo URLROOT; ?>/student/profile">Your registration is incomplete, kindly click here to proceed.</a></strong>
+					<strong><a href="<?php echo URLROOT; ?>/student/profile">Registration is incomplete click here to proceed.</a></strong>
 				</div>
-
-				<!-- <div class="col-lg-12 mb-3">
-	<div class="bs-component">
-	<div class="list-group">
-	<a class="list-group-item list-group-item-action active"><?php //echo $row[1]; 
-																?></a>
-	<a class="list-group-item list-group-item-action"><? php // echo $row[2]; 
-														?></a>
-	<a class="list-group-item list-group-item-action disabled"><?php //echo $row[3]; 
-																?></a></div>
-	</div>
-	</div> -->
-
-			</div>
-		</div>
-
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="tile">
-
-				<div class="kv-detail-view">
-					<table class="detail-view table table-hover" data-krajee-kvdetailview="kvDetailView_fd109e89">
+				<div class="table-responsive">
+					<table class="table table-hover">
 						<tbody>
 							<tr class="default">
 								<th colspan="2">Profile Photo <span></span></th>
@@ -66,7 +43,7 @@
 												if ($this->details->passport == "") : ?>
 													<img src="<?php echo URLROOT; ?>/images/students/<?php echo $this->details->sex; ?>.png" class="avatar_img">
 												<?php else: ?>
-													<img src="<?php echo URLROOT; ?>/images/students/<?php echo $this->details->passport; ?>" class="avatar_img">
+													<img src="<?php echo URLROOT; ?>/<?php echo $this->details->passport; ?>" class="avatar_img">
 												<?php endif; ?>
 											</a>
 										</div>
@@ -75,79 +52,76 @@
 								</th>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Registration Number</th>
+								<th style="width: 20%;">Registration Number</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->regno; ?></div>
+									<div class=""><?php echo $this->details->regno; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">First Name</th>
+								<th style="width: 20%;">First Name</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->fname; ?></div>
+									<div class=""><?php echo $this->details->fname; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Middle Name</th>
+								<th style="width: 20%;">Middle Name</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->mname; ?></div>
+									<div class=""><?php echo $this->details->mname; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Last Name</th>
+								<th style="width: 20%;">Last Name</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->lname; ?></div>
+									<div class=""><?php echo $this->details->lname; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Gender</th>
+								<th style="width: 20%;">Gender</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->sex; ?></div>
+									<div class=""><?php echo $this->details->sex; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Email</th>
+								<th style="width: 20%;">Email</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->email; ?> </div>
+									<div class=""><?php echo $this->details->email; ?> </div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Programme enrolled</th>
+								<th style="width: 20%;">Programme enrolled</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->programme; ?></div>
+									<div class=""><?php echo $this->details->programme; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Faculty</th>
+								<th style="width: 20%;">Faculty</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->school_of; ?></div>
+									<div class=""><?php echo $this->details->school_of; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Department</th>
+								<th style="width: 20%;">Department</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->department; ?></div>
+									<div class=""><?php echo $this->details->department; ?></div>
 								</td>
 							</tr>
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Mode of study</th>
+								<th style="width: 20%;">Mode of study</th>
 								<td>
-									<div class="kv-attribute"><?php echo $this->details->modeOfStudy; ?></div>
+									<div class=""><?php echo $this->details->modeOfStudy; ?></div>
 								</td>
-							</tr>
+
 							<tr>
-								<th style="width: 20%; text-align: ; vertical-align: ;">Proceed registration</th>
+								<th style="width: 20%;">Proceed registration</th>
 								<td>
-									<div class="kv-attribute"><a href="<?php echo URLROOT; ?>/student/profile" class="btn btn-primary app_btn" type="submit">Click me</a></div>
+									<div class=""><a href="<?php echo URLROOT; ?>/student/profile" class="btn btn-primary app_btn" type="submit">Click me</a></div>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
-
 			</div>
 		</div>
-
 	</div>
 </main>
 <?php require APPROOT . '/views/student/footer.php'; ?>

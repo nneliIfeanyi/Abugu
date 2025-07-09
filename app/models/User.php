@@ -61,7 +61,7 @@ class User
     }
   }
 
-   public function register_next_kin($data)
+  public function register_next_kin($data)
   {
     // Prepare Query
     $this->db->query('UPDATE admissions SET next_kin = :next_kin, phone3 = :phone3, address = :address WHERE id = :id');
@@ -80,6 +80,40 @@ class User
     }
   }
 
+
+  public function register_passport($db_image_file, $id)
+  {
+    // Prepare Query
+    $this->db->query('UPDATE admissions SET passport = :passport WHERE id = :id');
+
+    // Bind Values
+    $this->db->bind(':id', $id);
+    $this->db->bind(':passport', $db_image_file);
+
+    //Execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function register_olevel($db_image_file, $id)
+  {
+    // Prepare Query
+    $this->db->query('UPDATE admissions SET olevelDoc = :olevelDoc WHERE id = :id');
+
+    // Bind Values
+    $this->db->bind(':id', $id);
+    $this->db->bind(':olevelDoc', $db_image_file);
+
+    //Execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   // Find USer BY Email
   public function findUserByEmail($email)
   {

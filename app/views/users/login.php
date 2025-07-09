@@ -36,11 +36,11 @@
               <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
             </div>
             <div class="form-row my-3">
-              <div class="col">
-                <input type="submit" class="btn btn-success btn-block" value="Login">
+              <div class="col mb-3">
+                <input type="submit" class="btn btn-success px-4" value="Login">
               </div>
               <div class="col">
-                <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">No account? Register</a>
+                <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light">No account? Register</a>
               </div>
             </div>
           </form>
