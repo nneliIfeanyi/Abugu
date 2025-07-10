@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/student/header.php'; ?>
+<?php require APPROOT . '/views/student/inc/header.php'; ?>
 <main class="app-content">
 	<div class="app-title">
 		<div>
@@ -25,9 +25,19 @@
 		<div class="col-md-12">
 			<div class="tile">
 				<?php flash('register_success'); ?>
-				<div class="alert alert-dismissible alert-info">
-					<strong><a href="<?php echo URLROOT; ?>/student/profile">Registration is incomplete click here to proceed.</a></strong>
-				</div>
+				<?php if (empty($this->details->dob) || empty($this->details->next_kin) || empty($this->details->passport)): ?>
+					<div class="alert alert-dismissible alert-info">
+						<strong><a href="<?php echo URLROOT; ?>/student/profile">Registration is incomplete click here to proceed.</a></strong>
+					</div>
+				<?php elseif (empty($this->details->olevelDoc) || empty($this->details->originDoc) || empty($this->details->birthDoc)): ?>
+					<div class="alert alert-dismissible alert-info">
+						<strong><a href="<?php echo URLROOT; ?>/student/profile">Registration is incomplete your documents are required, kindly proceed to upload documents.</a></strong>
+					</div>
+				<?php else: ?>
+					<div class="alert alert-dismissible alert-info">
+						<strong><a href="<?php echo URLROOT; ?>/student/profile">Registration completed successfully,</a></strong>
+					</div>
+				<?php endif; ?>
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<tbody>
@@ -110,7 +120,94 @@
 								<td>
 									<div class=""><?php echo $this->details->modeOfStudy; ?></div>
 								</td>
-
+							</tr>
+							<tr>
+								<th style="width: 20%;">Date of birth</th>
+								<td>
+									<div class=""><?php echo $this->details->dob; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">State of origin</th>
+								<td>
+									<div class=""><?php echo $this->details->stateOfOrigin; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">L.G.A</th>
+								<td>
+									<div class=""><?php echo $this->details->lga; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Nationality</th>
+								<td>
+									<div class=""><?php echo $this->details->nationality; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Religion</th>
+								<td>
+									<div class=""><?php echo $this->details->religion; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Marital status</th>
+								<td>
+									<div class=""><?php echo $this->details->m_status; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Resident address</th>
+								<td>
+									<div class=""><?php echo $this->details->residence; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Mobile number</th>
+								<td>
+									<div class=""><?php echo $this->details->phone; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Alternate Mobile number</th>
+								<td>
+									<div class=""><?php echo $this->details->phone2; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Fullname of sponsor/Next of kin</th>
+								<td>
+									<div class=""><?php echo $this->details->next_kin; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Phone number of sponsor/next of kin</th>
+								<td>
+									<div class=""><?php echo $this->details->phone3; ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th style="width: 20%;">Address of sponsor/next of kin</th>
+								<td>
+									<div class=""><?php echo $this->details->address; ?></div>
+								</td>
+							</tr>
+							<?php if (empty($this->details->olevelDoc) || empty($this->details->originDoc) || empty($this->details->birthDoc)): ?>
+								<tr>
+									<th style="width: 20%;">Documents to upload</th>
+									<td>
+										<div class="">Not uploaded</div>
+									</td>
+								</tr>
+							<?php else: ?>
+								<tr>
+									<th style="width: 20%;">Documents to upload</th>
+									<td>
+										<div class="">Successfull!</div>
+									</td>
+								</tr>
+							<?php endif; ?>
 							<tr>
 								<th style="width: 20%;">Proceed registration</th>
 								<td>
@@ -124,6 +221,6 @@
 		</div>
 	</div>
 </main>
-<?php require APPROOT . '/views/student/footer.php'; ?>
+<?php require APPROOT . '/views/student/inc/footer.php'; ?>
 </body>
 <html>

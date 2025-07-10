@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/student/header.php'; ?>
+<?php require APPROOT . '/views/student/inc/header.php'; ?>
 <main class="app-content">
 	<div class="app-title">
 		<div>
@@ -164,7 +164,7 @@
 									</form>
 								<?php else: ?>
 									<div class="alert alert-dismissible alert-info">
-										<img src="<?php echo URLROOT; ?>/<?php echo $this->details->passport; ?>" class="avatar_img">
+										<!-- <img src="<?php echo URLROOT; ?>/<?php echo $this->details->passport; ?>" class="avatar_img"> -->
 										<strong> &nbsp;Passport uploaded successfully.</strong>
 									</div>
 								<?php endif; ?>
@@ -188,28 +188,39 @@
 									</div>
 								<?php endif; ?>
 
-
-								<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/stateOrigin" method="POST">
-									<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
-									<div class="mb-3">
-										<label class="form-label">State of origin <small style="font-size:xx-small">PDF file</small></label>
-										<input name="image" class="form-control" type="file" accept="application/pdf">
+								<?php if (empty($this->details->originDoc)): ?>
+									<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/origin" method="POST">
+										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
+										<div class="mb-3">
+											<label class="form-label">State of origin <small style="font-size:xx-small">PDF file</small></label>
+											<input name="originDoc" class="form-control" type="file" accept="application/pdf">
+										</div>
+										<div class="mb-3">
+											<button class="btn btn-primary app_btn" type="submit">Submit</button>
+										</div>
+										<hr>
+									</form>
+								<?php else: ?>
+									<div class="alert alert-dismissible alert-info">
+										<strong> &nbsp;State of origin uploaded successfully.</strong>
 									</div>
-									<div class="mb-3">
-										<button id="sub_btnp2" class="btn btn-primary app_btn" type="submit">Submit</button>
+								<?php endif; ?>
+								<?php if (empty($this->details->birthDoc)): ?>
+									<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/birth" method="POST">
+										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
+										<div class="mb-3">
+											<label class="form-label">Birth certificate <small style="font-size:xx-small">PDF file</small></label>
+											<input name="birthDoc" class="form-control" type="file" accept="application/pdf">
+										</div>
+										<div class="">
+											<button id="sub_btnp2" class="btn btn-primary app_btn" type="submit">Submit</button>
+										</div>
+									</form>
+								<?php else: ?>
+									<div class="alert alert-dismissible alert-info">
+										<strong> &nbsp;Birth certificate uploaded successfully.</strong>
 									</div>
-									<hr>
-								</form>
-								<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/birthCertificate" method="POST">
-									<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
-									<div class="mb-3">
-										<label class="form-label">Birth certificate <small style="font-size:xx-small">PDF file</small></label>
-										<input name="image" class="form-control" type="file" accept="application/pdf">
-									</div>
-									<div class="">
-										<button id="sub_btnp2" class="btn btn-primary app_btn" type="submit">Submit</button>
-									</div>
-								</form>
+								<?php endif; ?>
 							</div>
 
 						</div>
@@ -220,6 +231,6 @@
 	</div>
 </main>
 
-<?php require APPROOT . '/views/student/footer.php'; ?>
+<?php require APPROOT . '/views/student/inc/footer.php'; ?>
 </body>
 <html>

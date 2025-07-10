@@ -114,6 +114,38 @@ class User
       return false;
     }
   }
+  public function register_origin($db_image_file, $id)
+  {
+    // Prepare Query
+    $this->db->query('UPDATE admissions SET originDoc = :originDoc WHERE id = :id');
+
+    // Bind Values
+    $this->db->bind(':id', $id);
+    $this->db->bind(':originDoc', $db_image_file);
+
+    //Execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  public function register_birth($db_image_file, $id)
+  {
+    // Prepare Query
+    $this->db->query('UPDATE admissions SET birthDoc = :birthDoc WHERE id = :id');
+
+    // Bind Values
+    $this->db->bind(':id', $id);
+    $this->db->bind(':birthDoc', $db_image_file);
+
+    //Execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   // Find USer BY Email
   public function findUserByEmail($email)
   {

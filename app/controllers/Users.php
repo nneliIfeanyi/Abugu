@@ -234,7 +234,6 @@ class Users extends Controller
           $target_layer = fn_resize($image_resource_id, $source_properties[0], $source_properties[1]);
           imagejpeg($target_layer, "images/students/" . $_FILES['passport']['name']);
           $db_image_file =  "images/students/" . $_FILES['passport']['name'];
-          $_SESSION['passport'] = $db_image_file;
           if ($this->userModel->register_passport($db_image_file, $_POST['id'])) {
             // Redirect to login
             flash('register_success', 'Passport submitted successfully');
@@ -247,7 +246,6 @@ class Users extends Controller
           $target_layer = fn_resize($image_resource_id, $source_properties[0], $source_properties[1]);
           imagepng($target_layer, "images/students/" . $_FILES['passport']['name']);
           $db_image_file =  "images/students/" . $_FILES['passport']['name'];
-          $_SESSION['passport'] = $db_image_file;
           if ($this->userModel->register_passport($db_image_file, $_POST['id'])) {
             // Redirect to login
             flash('register_success', 'Passport submitted successfully');
@@ -301,6 +299,94 @@ class Users extends Controller
         }
       } else {
         //echo "❌ Invalid file type. Only PDF files are allowed.";
+        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        redirect('student');
+      }
+      // load view
+      //$this->view('users/login');
+    } else {
+      redirect('student');
+    }
+  }
+
+  public function origin()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // Get file details
+      $file = $_FILES['originDoc'];
+      $fileName = $file['name'];
+      $fileTmp = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+
+      // Get file extension
+      $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+      // Only allow PDF
+      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
+        $newFileName = uniqid('pdf_', true) . ".pdf";
+        $uploadDir = 'uploads/';
+        $uploadPath = $uploadDir . $newFileName;
+
+        // Create upload directory if not exists
+        if (!file_exists($uploadDir)) {
+          mkdir($uploadDir, 0777, true);
+        }
+
+        // Move file to uploads folder
+        if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_origin($uploadPath, $_POST['id'])) {
+          flash('register_success', ' Your upload is successfully');
+          redirect('student');
+        } else {
+          // Redirect to login
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          redirect('student');
+        }
+      } else {
+        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        redirect('student');
+      }
+      // load view
+      //$this->view('users/login');
+    } else {
+      redirect('student');
+    }
+  }
+
+  public function birth()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // Get file details
+      $file = $_FILES['birthDoc'];
+      $fileName = $file['name'];
+      $fileTmp = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+
+      // Get file extension
+      $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+      // Only allow PDF
+      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
+        $newFileName = uniqid('pdf_', true) . ".pdf";
+        $uploadDir = 'uploads/';
+        $uploadPath = $uploadDir . $newFileName;
+
+        // Create upload directory if not exists
+        if (!file_exists($uploadDir)) {
+          mkdir($uploadDir, 0777, true);
+        }
+
+        // Move file to uploads folder
+        if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_birth($uploadPath, $_POST['id'])) {
+          flash('register_success', ' Your upload is successfully');
+          redirect('student');
+        } else {
+          // Redirect to login
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          redirect('student');
+        }
+      } else {
         flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
         redirect('student');
       }
