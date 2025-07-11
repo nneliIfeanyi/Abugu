@@ -222,7 +222,7 @@ class Users extends Controller
   } // End Step One
 
   // Documents Submit
-  public function passport()
+  public function passport1()
   {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       if (is_array($_FILES)) {
@@ -257,6 +257,45 @@ class Users extends Controller
       } // End if is_array
     } else {
       //IF NOT A POST REQUEST
+      redirect('student');
+    }
+  }
+
+  public function passport()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $file = $_FILES['passport'];
+      $fileName = $file['name'];
+      $fileTmp = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+
+      // Allowed image types
+      $allowed = ['jpg', 'jpeg', 'png'];
+      $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+      if (in_array($fileExt, $allowed) && $fileError === 0 && $fileSize <= 1 * 1024 * 1024) {
+        $newFileName = uniqid('img_', true) . '.' . $fileExt;
+        $uploadDir = 'images/student/';
+        $uploadPath = $uploadDir . $newFileName;
+
+        if (!file_exists($uploadDir)) {
+          mkdir($uploadDir, 0777, true);
+        }
+        if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_passport($uploadPath, $_POST['id'])) {
+          // Redirect to login
+          flash('register_success', 'Passport submitted successfully');
+          redirect('student');
+        } else {
+          die('Something went wrong!');
+        }
+      } else {
+        // echo "❌ Invalid file type. Only JPG, JPEG, PNG, and GIF are allowed.";
+        flash('register_success', 'File too large or Invalid file type. Not more than 1mb, Only JPG, JPEG, PNG, are allowed.');
+        redirect('student');
+      }
+    } else {
+      // echo "No file submitted.";
       redirect('student');
     }
   }
