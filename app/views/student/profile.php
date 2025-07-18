@@ -38,7 +38,7 @@
 							<div class="table-responsive">
 								<h3 class="tile-title">Bio Data</h3>
 								<?php if (empty($this->details->dob)): ?>
-									<form action="<?php echo URLROOT; ?>/users/step_two" method="POST" autocomplete="OFF">
+									<form class="app_frm" action="<?php echo URLROOT; ?>/users/step_two" method="POST" autocomplete="OFF">
 										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
 										<div class="mb-2">
 											<label class="form-label">Date of birth</label>

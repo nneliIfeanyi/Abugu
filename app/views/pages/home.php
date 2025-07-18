@@ -88,10 +88,10 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="image-stack">
               <div class="image-stack-item image-stack-item-top" data-aos="zoom-in" data-aos-delay="400">
-                <img src="<?php echo URLROOT;?>/assets/img/education/env1.png" alt="Campus Life" class="img-fluid rounded-4 shadow-lg">
+                <img src="<?php echo URLROOT; ?>/assets/img/education/env1.png" alt="Campus Life" class="img-fluid rounded-4 shadow-lg">
               </div>
               <div class="image-stack-item image-stack-item-bottom" data-aos="zoom-in" data-aos-delay="500">
-                <img src="<?php echo URLROOT;?>/assets/img/education/grp3.png" alt="Students" class="img-fluid rounded-4 shadow-lg">
+                <img src="<?php echo URLROOT; ?>/assets/img/education/grp3.png" alt="Students" class="img-fluid rounded-4 shadow-lg">
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@
           <ul class="program-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All Programs</li>
             <li data-filter=".filter-ndhnd">ND/HND</li>
-            <li data-filter=".filter-pgda">PGDA</li>
+            <li data-filter=".filter-pgda">PGD</li>
             <!-- <li data-filter=".filter-certificate">Certificates</li> -->
           </ul>
 
@@ -173,11 +173,11 @@
 
             <div class="col-lg-6 isotope-item filter-pgda" data-aos="zoom-in" data-aos-delay="100">
               <div class="program-item">
-                <div class="program-badge">PGDA</div>
+                <div class="program-badge">PGD</div>
                 <div class="row g-0">
                   <div class="col-lg-10 mx-auto">
                     <div class="program-content">
-                      <h3>PGDA in Business Administration</h3>
+                      <h3>PGD in Business Administration</h3>
                       <div class="program-highlights">
                         <span><i class="bi bi-clock"></i> 18 Months</span>
                         <span><i class="bi bi-people-fill"></i> 60 Credits</span>
@@ -226,11 +226,11 @@
             </div><!-- End Program Item -->
             <div class="col-lg-6 isotope-item filter-pgda" data-aos="zoom-in" data-aos-delay="100">
               <div class="program-item">
-                <div class="program-badge">PGDA</div>
+                <div class="program-badge">PGD</div>
                 <div class="row g-0">
                   <div class="col-lg-10 mx-auto">
                     <div class="program-content">
-                      <h3>PGDA in Economics</h3>
+                      <h3>PGD in Economics</h3>
                       <div class="program-highlights">
                         <span><i class="bi bi-clock"></i> 18 Months</span>
                         <span><i class="bi bi-people-fill"></i> 24 Credits</span>
@@ -426,7 +426,7 @@
             <article>
 
               <div class="post-img">
-                <img src="<?php echo URLROOT?>/assets/img/news1.png" alt="" class="img-fluid">
+                <img src="<?php echo URLROOT ?>/assets/img/news1.png" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Politics</p>
@@ -436,7 +436,7 @@
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="<?php echo URLROOT?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="<?php echo URLROOT ?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Ike Victoria</p>
                   <p class="post-date">
@@ -452,7 +452,7 @@
             <article>
 
               <div class="post-img">
-                <img src="<?php echo URLROOT?>/assets/img/news3.png" alt="" class="img-fluid">
+                <img src="<?php echo URLROOT ?>/assets/img/news3.png" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Sports</p>
@@ -462,7 +462,7 @@
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="<?php echo URLROOT?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="<?php echo URLROOT ?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Monica James</p>
                   <p class="post-date">
@@ -478,7 +478,7 @@
             <article>
 
               <div class="post-img">
-                <img src="<?php echo URLROOT?>/assets/img/news2.png" alt="" class="img-fluid">
+                <img src="<?php echo URLROOT ?>/assets/img/news2.png" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Entertainment</p>
@@ -488,7 +488,7 @@
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="<?php echo URLROOT?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="<?php echo URLROOT ?>/assets/img/person/user.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Mark Henry</p>
                   <p class="post-date">

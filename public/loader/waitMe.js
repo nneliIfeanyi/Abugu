@@ -284,6 +284,6 @@ Github: https://github.com/vadimsva/waitMe
     setTimeout(function(){
       $('body.waitMe_body').find('.waitMe_container:not([data-waitme_id])').remove();
       $('body.waitMe_body').removeClass('waitMe_body hideMe');
-    },200);
+    },300);
   });
 })(jQuery);

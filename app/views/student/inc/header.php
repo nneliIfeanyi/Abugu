@@ -14,8 +14,12 @@
     <link type="text/css" rel="stylesheet" href="<?php echo URLROOT; ?>/loader/waitMe.css">
 </head>
 
-<body class="app sidebar-mini">
-
+<body class="app sidebar-mini waitMe_body">
+    <!-- Wait Me Page Loader -->
+    <div class="waitMe_container text" style="background: #fff;">
+        <div style="background:#fff;"><i class="spinner-border text-success" role="status"></i>
+        </div>
+    </div><!-- Wait Me Page Loader End -->
     <header class="app-header"><a class="app-header__logo" href="javascript:void(0);">S.M.P</a>
         <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
 

@@ -12,8 +12,8 @@ class User
   public function register($data)
   {
     // Prepare Query
-    $this->db->query('INSERT INTO admissions (regno, fname, mname, lname, sex, programme, school_of, department, modeOfStudy, highestQualification, email, password) 
-      VALUES (:regno, :fname, :mname, :lname, :sex, :programme, :school_of, :department, :modeOfStudy, :highestQualification, :email, :password)');
+    $this->db->query('INSERT INTO admissions (regno, fname, mname, lname, sex, programme, school_of, department, modeOfStudy, highestQualification, email, phone, password) 
+      VALUES (:regno, :fname, :mname, :lname, :sex, :programme, :school_of, :department, :modeOfStudy, :highestQualification, :email, :phone, :password)');
 
     // Bind Values
     $this->db->bind(':regno', $data['regno']);
@@ -27,6 +27,7 @@ class User
     $this->db->bind(':modeOfStudy', $data['modeOfStudy']);
     $this->db->bind(':highestQualification', $data['highestQualification']);
     $this->db->bind(':email', $data['email']);
+    $this->db->bind(':phone', $data['phone']);
     $this->db->bind(':password', $data['password']);
 
     //Execute

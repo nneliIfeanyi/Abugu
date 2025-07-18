@@ -25,6 +25,7 @@ class Users extends Controller
         'lname' => trim($_POST['lname']),
         'regno' => trim($_POST['regno']),
         'email' => trim($_POST['email']),
+        'phone' => trim($_POST['phone']),
         'password' => trim($_POST['password']),
         'c_password' => trim($_POST['c_password']),
         'sex' => trim($_POST['sex']),
@@ -52,7 +53,7 @@ class Users extends Controller
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         //Execute
         if ($this->userModel->register($data)) {
-          // Redirect to login
+          fast_send_sms($data['phone'],$data['email'],$_POST['password']);
           flash('register_success', 'You are now registered and can log in to proceed');
           redirect('users/login');
         } else {

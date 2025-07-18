@@ -29,7 +29,7 @@
                         <div class="col-12">
                             <div class="program-tabs">
                                 <ul class="nav nav-tabs justify-content-center" role="tablist">
-                                   <!--  <li class="nav-item" role="presentation">
+                                    <!--  <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#academics-all" type="button" role="tab">
                                             <span class="icon"><i class="bi bi-grid-3x3-gap"></i></span>
                                             <span class="text">All Programs</span>
@@ -44,7 +44,7 @@
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="graduate-tab" data-bs-toggle="tab" data-bs-target="#academics-graduate" type="button" role="tab">
                                             <span class="icon"><i class="bi bi-book"></i></span>
-                                            <span class="text">PGDA</span>
+                                            <span class="text">PGD</span>
                                         </button>
                                     </li>
                                 </ul>
@@ -58,26 +58,26 @@
                     <div class="tab-pane fade" id="academics-graduate" role="tabpanel">
                         <div class="row g-4">
                             <!-- Program Item -->
-                            <?php foreach ($data['graduate'] as $graduate) :?>
-                            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="program-item undergraduate">
-                                    <div class="program-header">
-                                        <span class="program-type">Postgraduate</span>
-                                    </div>
-                                    <div class="program-body">
-                                        <h3><?php echo $graduate[0] ;?></h3>
-                                        <ul class="program-details">
-                                            <li><i class="bi bi-clock"></i> <?php echo $graduate[1] ;?></li>
-                                            <li><i class="bi bi-mortarboard-fill"></i> <?php echo $graduate[2] ;?></li>
-                                            <li><i class="bi bi-calendar-check"></i> <?php echo $graduate[3] ;?></li>
-                                        </ul>
-                                    </div>
-                                   <!--  <div class="program-footer">
+                            <?php foreach ($data['graduate'] as $graduate) : ?>
+                                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="program-item undergraduate">
+                                        <div class="program-header">
+                                            <span class="program-type">Postgraduate</span>
+                                        </div>
+                                        <div class="program-body">
+                                            <h3><?php echo $graduate[0]; ?></h3>
+                                            <ul class="program-details">
+                                                <li><i class="bi bi-clock"></i> <?php echo $graduate[1]; ?></li>
+                                                <li><i class="bi bi-mortarboard-fill"></i> <?php echo $graduate[2]; ?></li>
+                                                <li><i class="bi bi-calendar-check"></i> <?php echo $graduate[3]; ?></li>
+                                            </ul>
+                                        </div>
+                                        <!--  <div class="program-footer">
                                         <a href="#" class="program-link">View Program <i class="bi bi-arrow-right"></i></a>
                                     </div> -->
+                                    </div>
                                 </div>
-                            </div>
-                        <?php endforeach;?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
 
@@ -85,30 +85,30 @@
                     <div class="tab-pane fade show active" id="academics-undergraduate" role="tabpanel">
                         <div class="row g-4">
                             <!-- Program Item -->
-                            <?php foreach ($data['undergraduate'] as $undergraduate) :?>
-                            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="program-item undergraduate">
-                                    <div class="program-header">
-                                        <span class="program-type">Undergraduate</span>
-                                    </div>
-                                    <div class="program-body">
-                                        <h3><?php echo $undergraduate[0] ;?></h3>
-                                        <ul class="program-details">
-                                            <li><i class="bi bi-clock"></i> <?php echo $undergraduate[1] ;?></li>
-                                            <li><i class="bi bi-mortarboard-fill"></i> <?php echo $undergraduate[2] ;?></li>
-                                            <li><i class="bi bi-calendar-check"></i> <?php echo $undergraduate[3] ;?></li>
-                                        </ul>
-                                    </div>
-                                   <!--  <div class="program-footer">
+                            <?php foreach ($data['undergraduate'] as $undergraduate) : ?>
+                                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="program-item undergraduate">
+                                        <div class="program-header">
+                                            <span class="program-type">Undergraduate</span>
+                                        </div>
+                                        <div class="program-body">
+                                            <h3><?php echo $undergraduate[0]; ?></h3>
+                                            <ul class="program-details">
+                                                <li><i class="bi bi-clock"></i> <?php echo $undergraduate[1]; ?></li>
+                                                <li><i class="bi bi-mortarboard-fill"></i> <?php echo $undergraduate[2]; ?></li>
+                                                <li><i class="bi bi-calendar-check"></i> <?php echo $undergraduate[3]; ?></li>
+                                            </ul>
+                                        </div>
+                                        <!--  <div class="program-footer">
                                         <a href="#" class="program-link">View Program <i class="bi bi-arrow-right"></i></a>
                                     </div> -->
+                                    </div>
                                 </div>
-                            </div>
-                        <?php endforeach;?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
-<!--  ###########################################
+                <!--  ###########################################
         ###############################################
             ################################################# -->
                 <div class="stats-wrapper" data-aos="fade-up">

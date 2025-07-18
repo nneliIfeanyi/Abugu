@@ -14,7 +14,6 @@
         <li><a href="<?php echo URLROOT; ?>/pages/about">About</a></li>
         <li><a href="<?php echo URLROOT; ?>/pages/admissions">Admissions</a></li>
         <li><a href="<?php echo URLROOT; ?>/pages/academics">Academics</a></li>
-        <li><a href="<?php echo URLROOT; ?>/pages/admissions">Admissions</a></li>
         <li><a href="<?php echo URLROOT; ?>/users/login">Login</a></li>
         <li><a href="<?php echo URLROOT; ?>/pages/apply">Register</a></li>
       </ul>

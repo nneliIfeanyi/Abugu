@@ -34,7 +34,7 @@
                 <h4>Programmes</h4>
                 <ul>
                     <li><a href="javascript:void()">ND/HND</a></li>
-                    <li><a href="javascript:void()">PGDA</a></li>
+                    <li><a href="javascript:void()">PGD</a></li>
                     <li><a href="javascript:void()">PART-TIME</a></li>
                     <li><a href="javascript:void()">WEEKEND</a></li>
                 </ul>

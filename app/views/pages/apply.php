@@ -36,38 +36,38 @@
                                     <div class="row g-4">
                                         <input type="hidden" name="regno" value="<?php echo $regno; ?>">
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="text" name="fname" class="form-control" placeholder="First Name" value="<?php echo $data['fname'] ?>" required="">
+                                            <input type="text" name="fname" class="form-control" placeholder="FIRST NAME" value="<?php echo $data['fname'] ?>" required>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="text" name="mname" class="form-control" placeholder="Middle Name" value="<?php echo $data['mname'] ?>" required="">
+                                            <input type="text" name="mname" class="form-control" placeholder="MIDDLE NAME" value="<?php echo $data['mname'] ?>" required>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="text" name="lname" class="form-control" placeholder="SurName" value="<?php echo $data['lname'] ?>" required="">
+                                            <input type="text" name="lname" class="form-control" placeholder="SURNAME" value="<?php echo $data['lname'] ?>" required>
                                         </div>
 
 
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <select name="sex" class="form-select" required="">
-                                                <option value="" selected="" disabled="">Gender</option>
+                                            <select name="sex" class="form-select" required>
+                                                <option value="" selected="" disabled="">GENDER</option>
                                                 <option value="male">Male</option>
                                                 <option value="female">Female</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <select name="programme" class="form-select" required="">
-                                                <option value="" selected="" disabled="">Program of Interest</option>
+                                            <select name="programme" class="form-select" required>
+                                                <option value="" selected="" disabled="">PROGRAM OF INTEREST</option>
                                                 <option value="ND">ND</option>
                                                 <option value="HND">HND</option>
-                                                <option value="PGDA">PGDA</option>
+                                                <option value="PGD">PGD</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                                             <select required id="mainSelect" name="school_of" class="form-select" onchange="updateSubOptions()">
-                                                <option value="">Select Faculty</option>
-                                                <option value="school_of_applied_art_and_science">School_of_applied_art_and_science</option>
-                                                <option value="school_of_business_administration_and_management">School_of_business_administration_and_management</option>
-                                                <option value="school_of_engineering">School_of_engineering</option>
-                                                <option value="school_of_environmental">School_of_environmental</option>
+                                                <option value="">SELECT FACULTY</option>
+                                                <option value="SCHOOL_OF_APPLIED_ART_AND_SCIENCE">SCHOOL_OF_APPLIED_ART_AND_SCIENCE</option>
+                                                <option value="SCHOOL_OF_ENGINEERING">SCHOOL_OF_ENGINEERING</option>
+                                                <option value="SCHOOL_OF_ENVIRONMENTAL">SCHOOL_OF_ENVIRONMENTAL</option>
+                                                <option value="SCHOOL_OF_BUSINESS_ADMINISTRATION_AND_MANAGEMENT">SCHOOL_OF_BUSINESS_ADMINISTRATION_AND_MANAGEMENT</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                                             <select class="form-control" name="modeOfStudy" required style="width: 100%;">
-                                                <option value="" selected disabled> Mode of study</option>
+                                                <option value="" selected disabled> MODE OF STUDY</option>
                                                 <option value="full-time">Full-Time</option>
                                                 <option value="weekend">Weekend</option>
                                                 <option value="Evening">Evening</option>
@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                                             <select class="form-control" name="highestQualification" required style="width: 100%;">
-                                                <option value="" selected disabled>Current highest qualification</option>
+                                                <option value="" selected disabled>CURRENT HIGHEST QUALIFICATION</option>
                                                 <option value="o'level">O'level</option>
                                                 <option value="ND">National Diploma</option>
                                                 <option value="HND">Higher National Diploma</option>
@@ -96,15 +96,19 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="email" name="email" class="form-control  <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>" placeholder="Email Address" required="">
+                                            <input type="email" name="email" class="form-control  <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>" placeholder="EMAIL" required>
                                             <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="password" name="password" class="form-control  <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>" placeholder="Your Password" required="">
+                                            <input type="tel" name="phone" class="form-control" value="<?php echo $data['phone']; ?>" placeholder="PHONE NUMBER" required maxlenght="11" pattrern="\d{11}">
+                                            <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                            <input type="password" name="password" class="form-control  <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>" placeholder="PASSWORD" required>
                                             <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <input type="password" name="c_password" class="form-control  <?php echo (!empty($data['c_password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['c_password']; ?>" placeholder="Retype Password" required="">
+                                            <input type="password" name="c_password" class="form-control  <?php echo (!empty($data['c_password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['c_password']; ?>" placeholder="COMFIRM PASSWORD" required>
                                             <span class="invalid-feedback"><?php echo $data['c_password_err']; ?></span>
                                         </div>
                                         <div class="text-center">
@@ -125,22 +129,22 @@
         // const subLabel = document.querySelector('label[for="subSelect"]');
 
         const optionsMap = {
-            school_of_applied_art_and_science: [
+            SCHOOL_OF_APPLIED_ART_AND_SCIENCE: [
                 'Computer science department',
                 'Science Laboratory and Technology',
                 'Mass communication',
                 'Food science and Technology',
                 'Fishery', 'Statistics'
             ],
-            school_of_engineering: [
+            SCHOOL_OF_ENGINEERING: [
                 'Computer Engineering',
                 'Electrical Electronic Engineering',
                 'Mechanical Engineering',
                 'Civil Engineering',
                 'Agricultural Engineering'
             ],
-            school_of_environmental: ['Quantity Survey', 'Architectural department ', 'Building Technology', 'Urban and Regional Planning', 'Survey and Geo informatics'],
-            school_of_business_administration_and_management: ['Business Administration', 'Banking and Finance', 'Marketing', 'Accounting', 'Public Administration']
+            SCHOOL_OF_ENVIRONMENTAL: ['Quantity Survey', 'Architectural department ', 'Building Technology', 'Urban and Regional Planning', 'Survey and Geo informatics'],
+            SCHOOL_OF_BUSINESS_ADMINISTRATION_AND_MANAGEMENT: ['Business Administration', 'Banking and Finance', 'Marketing', 'Accounting', 'Public Administration']
         };
 
         function updateSubOptions() {

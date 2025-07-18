@@ -81,7 +81,7 @@
                     <div class="date">3<sup>rd</sup> July <i class="bi bi-arrow-right"></i> 30<sup>th</sup> OCT. 2025</div>
                   </div>
                   <div class="deadline-item">
-                    <h4>PGDA REGISTRATION</h4>
+                    <h4>PGD REGISTRATION</h4>
                     <div class="date">30<sup>TH</sup> MAY <i class="bi bi-arrow-right"></i> 30<sup>th</sup> AUG. 2025</div>
                   </div>
                 </div>
@@ -156,7 +156,7 @@
                         <option value="" selected="" disabled="">Program of Interest</option>
                         <option value="">ND</option>
                         <option value="">HND</option>
-                        <option value="">PGDA</option>
+                        <option value="">PGD</option>
                         <option value="">WEEKEND</option>
                         <option value="">PART-TIME</option>
                       </select>
