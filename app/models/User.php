@@ -40,7 +40,7 @@ class User
 
   public function register_bio_data($data)
   {
-    $this->db->query('UPDATE admissions SET dob = :dob, stateOfOrigin = :stateOfOrigin, lga = :lga, nationality = :nationality, religion = :religion, m_status = :m_status, residence = :residence, phone = :phone, phone2 = :phone2 WHERE id = :id');
+    $this->db->query('UPDATE admissions SET dob = :dob, stateOfOrigin = :stateOfOrigin, lga = :lga, nationality = :nationality, religion = :religion, m_status = :m_status, residence = :residence, phone2 = :phone2 WHERE id = :id');
 
     // Bind Values
     $this->db->bind(':id', $data['id']);
@@ -51,7 +51,7 @@ class User
     $this->db->bind(':religion', $data['religion']);
     $this->db->bind(':m_status', $data['m_status']);
     $this->db->bind(':residence', $data['residence']);
-    $this->db->bind(':phone', $data['phone']);
+    //$this->db->bind(':phone', $data['phone']);
     $this->db->bind(':phone2', $data['phone2']);
 
     //Execute

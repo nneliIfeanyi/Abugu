@@ -77,10 +77,6 @@
 											<input name="residence" required class="form-control" type="text">
 										</div>
 										<div class="mb-2">
-											<label class="form-label">Mobile number</label>
-											<input name="phone" required class="form-control" type="tel">
-										</div>
-										<div class="mb-2">
 											<label class="form-label">Alternative mobile no. &nbsp;&nbsp;&nbsp;<small style="font-size:xx-small">optional</small></label>
 											<input name="phone3" class="form-control" type="tel">
 										</div>
@@ -174,8 +170,8 @@
 									<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/olevel" method="POST">
 										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
 										<div class="mb-3">
-											<label class="form-label">O'level <small style="font-size:xx-small">PDF file</small></label>
-											<input name="olevelDoc" class="form-control" type="file" accept="application/pdf">
+											<label class="form-label">O'level <small style="font-size:xx-small">image|PDF file</small></label>
+											<input name="olevelDoc" class="form-control" type="file">
 										</div>
 										<div class="mb-3">
 											<button class="btn btn-primary app_btn" type="submit">Submit</button>
@@ -192,8 +188,8 @@
 									<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/origin" method="POST">
 										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
 										<div class="mb-3">
-											<label class="form-label">State of origin <small style="font-size:xx-small">PDF file</small></label>
-											<input name="originDoc" class="form-control" type="file" accept="application/pdf">
+											<label class="form-label">State of origin <small style="font-size:xx-small">image|PDF file</small></label>
+											<input name="originDoc" class="form-control" type="file">
 										</div>
 										<div class="mb-3">
 											<button class="btn btn-primary app_btn" type="submit">Submit</button>
@@ -209,8 +205,8 @@
 									<form enctype="multipart/form-data" action="<?php echo URLROOT; ?>/users/birth" method="POST">
 										<input type="hidden" name="id" value="<?php echo $this->details->id; ?>">
 										<div class="mb-3">
-											<label class="form-label">Birth certificate <small style="font-size:xx-small">PDF file</small></label>
-											<input name="birthDoc" class="form-control" type="file" accept="application/pdf">
+											<label class="form-label">Birth certificate <small style="font-size:xx-small">image|PDF file</small></label>
+											<input name="birthDoc" class="form-control" type="file">
 										</div>
 										<div class="">
 											<button id="sub_btnp2" class="btn btn-primary app_btn" type="submit">Submit</button>

@@ -33,7 +33,7 @@ function fast_send_sms($phone_number)
   $phone_number = ltrim($phone_number, '\0');
   $email = "alexabugu@gmail.com";
   $password = "336654@abc";
-  $message = "You have been offered admission into st Mary polytechnic click the link to complete your registration https.stmarypolytechnic.com.ng";
+  $message = "Congratulations! You have successfully registered with ST MARY'S POLYTECHNIC. Login with your email and password to proceed\nhttps://stmarypolytechnic.com.ng";
   $sender_name = "SMP";
   $recipients = '234' . $phone_number;
 

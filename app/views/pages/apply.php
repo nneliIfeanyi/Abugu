@@ -71,7 +71,7 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                            <select id="subSelect" name="department" class="form-select">
+                                            <select id="subSelect" required name="department" class="form-select">
                                                 <!-- Options will be added dynamically -->
                                             </select>
                                         </div>
@@ -87,7 +87,7 @@
                                         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                                             <select class="form-control" name="highestQualification" required style="width: 100%;">
                                                 <option value="" selected disabled>CURRENT HIGHEST QUALIFICATION</option>
-                                                <option value="o'level">O'level</option>
+                                                <option value="o'level">Olevel</option>
                                                 <option value="ND">National Diploma</option>
                                                 <option value="HND">Higher National Diploma</option>
                                                 <option value="BD">Bachelor's Degree</option>
@@ -169,6 +169,30 @@
                 subSelect.style.display = 'none';
             }
         }
+    </script>
+    <script>
+        if (performance.navigation.type === 1) {
+            sessionStorage.clear();
+        }
+        // Get all select elements
+        const selects = document.querySelectorAll('select');
+
+        selects.forEach((select, index) => {
+            // Create a unique key for each select based on index
+            const key = `select-${ index}`;
+
+            // Restore saved value if available
+            const savedValue = sessionStorage.getItem(key);
+            if (savedValue) select.value = savedValue;
+
+            // Save value on change
+            select.addEventListener('change', () => {
+                sessionStorage.setItem(key, select.value);
+            });
+            setTimeout(() => {
+                sessionStorage.clear();
+            }, 5 * 60 * 1000);
+        });
     </script>
     <?php require APPROOT . '/views/inc/footer.php'; ?>
 </body>

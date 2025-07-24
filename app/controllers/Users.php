@@ -53,7 +53,7 @@ class Users extends Controller
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         //Execute
         if ($this->userModel->register($data)) {
-          fast_send_sms($data['phone'],$data['email'],$_POST['password']);
+          fast_send_sms($data['phone']);
           flash('register_success', 'You are now registered and can log in to proceed');
           redirect('users/login');
         } else {
@@ -181,7 +181,7 @@ class Users extends Controller
         'religion' => trim($_POST['religion']),
         'm_status' => trim($_POST['m_status']),
         'residence' => trim($_POST['residence']),
-        'phone' => trim($_POST['phone']),
+        //'phone' => trim($_POST['phone']),
         'phone2' => trim($_POST['phone3']),
       ];
       if ($this->userModel->register_bio_data($data)) {
@@ -269,31 +269,37 @@ class Users extends Controller
       $fileName = $file['name'];
       $fileTmp = $file['tmp_name'];
       $fileSize = $file['size'];
-      $fileError = $file['error'];
+      // $fileError = $file['error'];
 
       // Allowed image types
       $allowed = ['jpg', 'jpeg', 'png'];
       $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
-      if (in_array($fileExt, $allowed) && $fileError === 0 && $fileSize <= 1 * 1024 * 1024) {
-        $newFileName = uniqid('img_', true) . '.' . $fileExt;
-        $uploadDir = 'images/student/';
-        $uploadPath = $uploadDir . $newFileName;
-
-        if (!file_exists($uploadDir)) {
-          mkdir($uploadDir, 0777, true);
-        }
-        if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_passport($uploadPath, $_POST['id'])) {
-          // Redirect to login
-          flash('register_success', 'Passport submitted successfully');
-          redirect('student');
-        } else {
-          die('Something went wrong!');
-        }
-      } else {
-        // echo "❌ Invalid file type. Only JPG, JPEG, PNG, and GIF are allowed.";
-        flash('register_success', 'File too large or Invalid file type. Not more than 1mb, Only JPG, JPEG, PNG, are allowed.');
+      $newFileName = uniqid('img_', true) . '.' . $fileExt;
+      $uploadDir = 'uploads/';
+      $uploadPath = $uploadDir . $newFileName;
+      // Only allow the allowed
+      if (!in_array($fileExt, $allowed)) {
+        flash('register_success', 'Only JPG, JPEG, PNG, are allowed', 'alert alert-danger');
         redirect('student');
+        exit();
+      }
+      if ($fileSize >= 1 * 1024 * 1024) {
+        flash('register_success', 'File larger than 1mb', 'alert alert-danger');
+        redirect('student');
+        exit();
+      }
+      // Create upload directory if not exists
+      if (!file_exists($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
+      }
+      if (move_uploaded_file($fileTmp, $uploadPath)) {
+        // Submit to DB
+        $this->userModel->register_passport($uploadPath, $_POST['id']);
+        // Redirect to login
+        flash('register_success', 'Passport submitted successfully');
+        redirect('student');
+      } else {
+        die('Something went wrong!');
       }
     } else {
       // echo "No file submitted.";
@@ -309,41 +315,43 @@ class Users extends Controller
       $fileName = $file['name'];
       $fileTmp = $file['tmp_name'];
       $fileSize = $file['size'];
-      $fileError = $file['error'];
-
+      $uploadDir = 'uploads/';
+      //Limit upload size
+      if ($fileSize >= 1 * 1024 * 1024) {
+        flash('register_success', 'File larger than 1mb', 'alert alert-danger');
+        redirect('student');
+        exit();
+      }
       // Get file extension
       $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
-      // Only allow PDF
-      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
-        $newFileName = uniqid('pdf_', true) . ".pdf";
-        $uploadDir = 'uploads/';
+      // Allowed extension
+      $allowed = ['jpg', 'jpeg', 'png', 'pdf'];
+      if (in_array($fileExt, $allowed)) {
+        if ($fileExt === 'pdf') {
+          $newFileName = uniqid('pdf_', true) . ".pdf";
+        } else {
+          $newFileName = uniqid('img_', true) . '.' . $fileExt;
+        }
         $uploadPath = $uploadDir . $newFileName;
 
         // Create upload directory if not exists
         if (!file_exists($uploadDir)) {
           mkdir($uploadDir, 0777, true);
         }
-
         // Move file to uploads folder
         if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_olevel($uploadPath, $_POST['id'])) {
-          // echo "✅ PDF uploaded successfully as: <strong>" . htmlspecialchars($newFileName) . "</strong><br>";
-          // echo "<a href='$uploadPath' target='_blank'>Download/View PDF</a>";
-          // Redirect to login
           flash('register_success', ' Your upload is successfully');
           redirect('student');
         } else {
           // Redirect to login
-          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert-danger');
           redirect('student');
         }
       } else {
-        //echo "❌ Invalid file type. Only PDF files are allowed.";
-        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        // Redirect to login
+        flash('register_success', 'File format not supported', 'alert alert-danger');
         redirect('student');
       }
-      // load view
-      //$this->view('users/login');
     } else {
       redirect('student');
     }
@@ -357,37 +365,43 @@ class Users extends Controller
       $fileName = $file['name'];
       $fileTmp = $file['tmp_name'];
       $fileSize = $file['size'];
-      $fileError = $file['error'];
-
+      $uploadDir = 'uploads/';
+      //Limit upload size
+      if ($fileSize >= 1 * 1024 * 1024) {
+        flash('register_success', 'File larger than 1mb', 'alert alert-danger');
+        redirect('student');
+        exit();
+      }
       // Get file extension
       $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
-      // Only allow PDF
-      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
-        $newFileName = uniqid('pdf_', true) . ".pdf";
-        $uploadDir = 'uploads/';
+      // Allowed extension
+      $allowed = ['jpg', 'jpeg', 'png', 'pdf'];
+      if (in_array($fileExt, $allowed)) {
+        if ($fileExt === 'pdf') {
+          $newFileName = uniqid('pdf_', true) . ".pdf";
+        } else {
+          $newFileName = uniqid('img_', true) . '.' . $fileExt;
+        }
         $uploadPath = $uploadDir . $newFileName;
 
         // Create upload directory if not exists
         if (!file_exists($uploadDir)) {
           mkdir($uploadDir, 0777, true);
         }
-
         // Move file to uploads folder
         if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_origin($uploadPath, $_POST['id'])) {
           flash('register_success', ' Your upload is successfully');
           redirect('student');
         } else {
           // Redirect to login
-          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert-danger');
           redirect('student');
         }
       } else {
-        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        // Redirect to login
+        flash('register_success', 'File format not supported', 'alert alert-danger');
         redirect('student');
       }
-      // load view
-      //$this->view('users/login');
     } else {
       redirect('student');
     }
@@ -401,37 +415,43 @@ class Users extends Controller
       $fileName = $file['name'];
       $fileTmp = $file['tmp_name'];
       $fileSize = $file['size'];
-      $fileError = $file['error'];
-
+      $uploadDir = 'uploads/';
+      //Limit upload size
+      if ($fileSize >= 1 * 1024 * 1024) {
+        flash('register_success', 'File larger than 1mb', 'alert alert-danger');
+        redirect('student');
+        exit();
+      }
       // Get file extension
       $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
-      // Only allow PDF
-      if ($fileExt === 'pdf' && $fileError === 0 && $fileSize <= 5 * 1024 * 1024) {
-        $newFileName = uniqid('pdf_', true) . ".pdf";
-        $uploadDir = 'uploads/';
+      // Allowed extension
+      $allowed = ['jpg', 'jpeg', 'png', 'pdf'];
+      if (in_array($fileExt, $allowed)) {
+        if ($fileExt === 'pdf') {
+          $newFileName = uniqid('pdf_', true) . ".pdf";
+        } else {
+          $newFileName = uniqid('img_', true) . '.' . $fileExt;
+        }
         $uploadPath = $uploadDir . $newFileName;
 
         // Create upload directory if not exists
         if (!file_exists($uploadDir)) {
           mkdir($uploadDir, 0777, true);
         }
-
         // Move file to uploads folder
         if (move_uploaded_file($fileTmp, $uploadPath) && $this->userModel->register_birth($uploadPath, $_POST['id'])) {
           flash('register_success', ' Your upload is successfully');
           redirect('student');
         } else {
           // Redirect to login
-          flash('register_success', 'Something went wrong, pls try later.', 'alert alert danger');
+          flash('register_success', 'Something went wrong, pls try later.', 'alert alert-danger');
           redirect('student');
         }
       } else {
-        flash('register_success', '❌ Invalid file type. Only PDF files are allowed..', 'alert alert danger');
+        // Redirect to login
+        flash('register_success', 'File format not supported', 'alert alert-danger');
         redirect('student');
       }
-      // load view
-      //$this->view('users/login');
     } else {
       redirect('student');
     }

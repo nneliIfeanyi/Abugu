@@ -9,7 +9,7 @@
                 <div class="footer-contact pt-3">
                     <p>Old Niger Motel Road</p>
                     <p>Suleja, Niger State.</p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>08065255713, 08038355760</span></p>
+                    <p class="mt-3"><strong>Phone:</strong> <span>08065255713, 08038355760,07059193309, 09099672006,08036346683</span></p>
                     <p><strong>Email:</strong> <span>stmarypolytechnic@gmail.com</span></p>
                 </div>
                 <!-- <div class="social-links d-flex mt-4">
