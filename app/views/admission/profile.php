@@ -33,7 +33,7 @@
                                     ? URLROOT . "/" . $data['user']->passport
                                     : "https://via.placeholder.com/150x150.png?text=No+Photo";
                                 ?>
-                                <a href="<?php echo $photo; ?>" download>
+                                <a href="<?php echo $photo; ?>">
                                     <img src="<?php echo $photo; ?>" alt="Profile Photo" class="rounded-circle shadow-sm" width="150" height="150">
                                 </a>
                             </div>
@@ -132,8 +132,8 @@
                                     <div class="col-sm-4 fw-bold">O'Level Doc:</div>
                                     <div class="col-sm-8">
                                         <?php if (!empty($data['user']->originDoc)) : ?>
-                                            <a download href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->originDoc); ?>">
-                                                Download
+                                            <a href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->originDoc); ?>">
+                                                View
                                             </a>
                                         <?php endif; ?>
                                     </div>
@@ -142,8 +142,8 @@
                                     <div class="col-sm-4 fw-bold">Birth Cert:</div>
                                     <div class="col-sm-8">
                                         <?php if (!empty($data['user']->birthDoc)) : ?>
-                                            <a download href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->birthDoc); ?>">
-                                                Download
+                                            <a href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->birthDoc); ?>">
+                                                View
                                             </a>
                                         <?php endif; ?>
                                     </div>
@@ -153,8 +153,8 @@
                                     <div class="col-sm-4 fw-bold">State of Origin Doc:</div>
                                     <div class="col-sm-8">
                                         <?php if (!empty($data['user']->originDoc)) : ?>
-                                            <a download href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->originDoc); ?>">
-                                                Download
+                                            <a href="<?php echo URLROOT . '/' . htmlspecialchars($data['user']->originDoc); ?>">
+                                                View
                                             </a>
                                         <?php endif; ?>
                                     </div>
@@ -168,13 +168,48 @@
                             </div>
                         </div>
 
-                        <div class="card-footer text-end">
-                            <a href="javascript:void" class="btn btn-warning">
-                                <i class="bi bi-pencil"></i> Edit
-                            </a>
-                            <a href="javascript:void" class="btn btn-danger">
-                                <i class="bi bi-trash"></i> Delete
-                            </a>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-end">
+                                <?php if ($data['user']->is_admitted == '1') : ?>
+                                    <a href="javascript:void" class="btn btn-primary me-2">
+                                        <i class=""></i> Admittted
+                                    </a>
+                                <?php else : ?>
+                                    <a href="<?php echo URLROOT; ?>/admission/admit/<?= $data['user']->id ?>" class="btn btn-primary me-2">
+                                        <i class=""></i> Admit
+                                    </a>
+                                <?php endif; ?>
+                                <a href="javascript:void" class="btn btn-warning me-2">
+                                    <i class="bi bi-pencil"></i> Edit
+                                </a>
+                                <a href="javascript:void" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="bi bi-trash"></i> Delete
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content border-danger">
+                                    <div class="modal-header bg-danger text-white">
+                                        <h5 class="modal-title" id="deleteModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Warning!</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <p class="fs-5">Are you sure you want to <strong class="text-danger">delete this record</strong>?</p>
+                                        <p class="text-muted small">This action cannot be undone.</p>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                                        <!-- Form or link to delete -->
+                                        <form method="post" action="<?php echo URLROOT; ?>/admission/delete/<?= $data['user']->id ?>" class="d-inline">
+                                            <input type="hidden" name="id" id="deleteId">
+                                            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -29,4 +29,4 @@
 </head>
 
 <body>
-    <?php flash('msg'); ?>
+    <?php notify('msg'); ?>
