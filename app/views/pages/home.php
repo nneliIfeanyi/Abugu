@@ -34,17 +34,17 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-md-6 col-xl-4 col-12 ticker-item">
-              <span class="date">MAY 10</span>
+              <span class="date">JAN 10</span>
               <span class="title">Semester Begin</span>
               <!-- <a href="javascript:void()" class="btn-register">Past</a> -->
             </div>
             <div class="col-md-6 col-12 col-xl-4  ticker-item">
-              <span class="date">JUL 3</span>
+              <span class="date">Nov 10</span>
               <span class="title">Online Application Begin</span>
               <!-- <a href="javascript:void()" class="btn-register">Past</a> -->
             </div>
             <div class="col-md-6 col-12 col-xl-4 ticker-item">
-              <span class="date">OCT 10</span>
+              <span class="date">JAN 10</span>
               <span class="title">Matriculation Of New Student</span>
               <!-- <a href="javascript:void()" class="btn-register">Coming Soon</a> -->
             </div>
@@ -61,7 +61,7 @@
 
         <div class="row mb-5">
           <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <h2 class="display-6 fw-bold mb-4">WELCOME TO <span>ST. MARY'S POLY</span></h2>
+            <h2 class="display-6 fw-bold mb-4">WELCOME TO <span>ST. MARY'S POLYTECHNIC</span> SULEJA</h2>
             <p class="lead mb-4">We are more than a place of learning __ We are a community with a focus on academic excellence, personal growth, and innovation. We create an environment where every student feels seen, supported and inspired to succeed.</p>
             <div class="d-flex flex-wrap gap-4 mb-4">
               <div class="stat-box">
@@ -80,7 +80,7 @@
             <div class="d-flex align-items-center mt-4 signature-block">
               <!-- <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120"> -->
               <div class="ms-3">
-                <p class="mb-0 fw-bold">Rev Dr. Anthony Nwafor</p>
+                <p class="mb-0 fw-bold">Rev. Fr. Dr. Nwafor Anthony Chijioke</p>
                 <p class="mb-0 text-muted">Rector</p>
               </div>
             </div>
