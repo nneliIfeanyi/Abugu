@@ -184,7 +184,7 @@
                         <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="leader-card">
                                 <div class="leader-image">
-                                    <img src="<?php echo URLROOT; ?>/assets/img/person/rector.png" alt="Principal" class="img-fluid">
+                                    <img src="<?php echo URLROOT; ?>/images/logo/rector.png" alt="Principal" class="img-fluid">
                                     <div class="social-links">
                                         <a href="#"><i class="bi bi-linkedin"></i></a>
                                         <a href="#"><i class="bi bi-twitter-x"></i></a>
