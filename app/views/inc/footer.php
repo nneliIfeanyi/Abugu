@@ -3,10 +3,10 @@
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
-                    <span class="sitename">ST. MARY'S</span>
+                <a href="" class="logo m-0 d-flex align-items-center">
+                    <span class="sitename">ST. MARY POLY</span>
                 </a>
-                <div class="footer-contact pt-3">
+                <div class="footer-contact pt-1">
                     <p>Old Niger Motel Road</p>
                     <p>Suleja, Niger State.</p>
                     <p class="mt-3"><strong>Phone:</strong> <span>08065255713, 08038355760,07059193309, 09099672006,08036346683</span></p>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename"><?php echo SITENAME; ?></strong> <span>All Rights Reserved</span></p>
+        <p>© <strong class="px-1 sitename"><?php echo SITENAME; ?></strong> <span>All Rights Reserved</span></p>
     </div>
 
 </footer>

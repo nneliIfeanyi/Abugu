@@ -8,9 +8,9 @@
 // // App Root
 // define('APPROOT', dirname(dirname(__FILE__)));
 // // URL Root
-// define('URLROOT', 'http://localhost/st-mary');
+// define('URLROOT', 'http://localhost/abugu');
 // // Site Name
-// define('SITENAME', 'ST. MARY\'S POLY');
+// define('SITENAME', 'ST. MARY POLYTECHNIC SULEJA');
 
 
 // DB Params
@@ -24,4 +24,4 @@ define('APPROOT', dirname(dirname(__FILE__)));
 //URL Root
 define('URLROOT', 'https://stmarypolytechnic.com.ng');
 //Site Name
-define('SITENAME', 'ST. MARY\'S POLY');
+define('SITENAME', 'ST. MARY POLYTECHNIC SULEJA');
