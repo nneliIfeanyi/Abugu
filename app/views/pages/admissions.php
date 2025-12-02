@@ -70,19 +70,19 @@
                 <div class="deadline-grid mt-4">
                   <div class="deadline-item">
                     <h4>ND REGISTRATION</h4>
-                    <div class="date">3<sup>rd</sup> July <i class="bi bi-arrow-right"></i> 30<sup>th</sup> OCT. 2025</div>
+                    <div class="date">10<sup>th</sup> November <i class="bi bi-arrow-right"></i> 30<sup>th</sup> January 2025</div>
                   </div>
                   <div class="deadline-item">
                     <h4>HND REGISTRATION</h4>
-                    <div class="date">3<sup>rd</sup> July <i class="bi bi-arrow-right"></i> 30<sup>th</sup> OCT. 2025</div>
+                    <div class="date">10<sup>th</sup> November <i class="bi bi-arrow-right"></i> 30<sup>th</sup> January 2025</div>
                   </div>
                   <div class="deadline-item">
                     <h4>PART-TIME REGISTRATION</h4>
-                    <div class="date">3<sup>rd</sup> July <i class="bi bi-arrow-right"></i> 30<sup>th</sup> OCT. 2025</div>
+                    <div class="date">10<sup>th</sup> November <i class="bi bi-arrow-right"></i> 30<sup>th</sup> January 2025</div>
                   </div>
                   <div class="deadline-item">
                     <h4>PGD REGISTRATION</h4>
-                    <div class="date">30<sup>TH</sup> MAY <i class="bi bi-arrow-right"></i> 30<sup>th</sup> AUG. 2025</div>
+                    <div class="date">10<sup>th</sup>November <i class="bi bi-arrow-right"></i> 30<sup>th</sup> January 2025</div>
                   </div>
                 </div>
               </div>

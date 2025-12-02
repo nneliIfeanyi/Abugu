@@ -3,8 +3,9 @@
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
-                <a href="" class="logo m-0 d-flex align-items-center">
-                    <span class="sitename">ST. MARY POLY</span>
+                <a href="" class="logo m-0 d-flex mb-2 align-items-center">
+                    <!-- <span class="sitename">ST MARY POLY</span> -->
+                    <img src="<?php echo URLROOT; ?>/images/logo/stmarytech.png" width="150" height="90" alt="site Logo" class="">
                 </a>
                 <div class="footer-contact pt-1">
                     <p>Old Niger Motel Road</p>

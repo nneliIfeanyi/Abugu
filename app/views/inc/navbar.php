@@ -4,7 +4,7 @@
     <a href="javascript:void(0);" class="logo d-flex align-items-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <i class="bi bi-buildings" style="margin-right: -1px;"></i>
-      <img src="<?php echo URLROOT; ?>/images/logo/stmary2.png" width="200" height="150" alt="site Logo" class="">
+      <img src="<?php echo URLROOT; ?>/images/logo/stmarytech.png" width="200" height="150" alt="site Logo" class="">
 
       <!-- <h1 class="sitename">ST. MARY'S</h1> -->
     </a>

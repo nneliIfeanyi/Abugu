@@ -192,7 +192,7 @@
                                     </div>
                                 </div>
                                 <div class="leader-info">
-                                    <h4>Very Rev. Dr. Anthony Chijioke Nwafor</h4>
+                                    <h4>Rev. Dr. Nwafor Anthony Chijioke</h4>
                                     <p class="position">Rector</p>
                                     <p class="bio"></p>
                                 </div>

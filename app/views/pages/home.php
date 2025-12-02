@@ -44,7 +44,7 @@
               <!-- <a href="javascript:void()" class="btn-register">Past</a> -->
             </div>
             <div class="col-md-6 col-12 col-xl-4 ticker-item">
-              <span class="date">JAN 10</span>
+              <span class="date">To be announced</span>
               <span class="title">Matriculation Of New Student</span>
               <!-- <a href="javascript:void()" class="btn-register">Coming Soon</a> -->
             </div>
