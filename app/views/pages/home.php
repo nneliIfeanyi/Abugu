@@ -61,7 +61,7 @@
 
         <div class="row mb-5">
           <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <h2 class="display-6 fw-bold mb-4">WELCOME TO <span>ST. MARY'S POLYTECHNIC</span> SULEJA</h2>
+            <h2 class="display-6 fw-bold mb-4">WELCOME TO <span>ST MARY POLYTECHNIC</span> SULEJA</h2>
             <p class="lead mb-4">We are more than a place of learning __ We are a community with a focus on academic excellence, personal growth, and innovation. We create an environment where every student feels seen, supported and inspired to succeed.</p>
             <div class="d-flex flex-wrap gap-4 mb-4">
               <div class="stat-box">
