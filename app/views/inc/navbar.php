@@ -5,10 +5,8 @@
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <i class="bi bi-buildings"></i> -->
       <img src="<?php echo URLROOT; ?>/images/logo/stmarytech.png" width="200" height="150" alt="site Logo" class="">
-
       <!-- <h1 class="sitename">ST. MARY'S</h1> -->
     </a>
-
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="<?php echo URLROOT; ?>/pages">Home</a></li>
@@ -20,6 +18,5 @@
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
-
   </div>
 </header>

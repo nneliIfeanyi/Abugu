@@ -78,8 +78,8 @@
               </div>
             </div>
             <div class="d-flex align-items-center mt-4 signature-block">
-              <!-- <img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120"> -->
-              <div class="ms-3">
+              <img src="<?php echo URLROOT; ?>/images/logo/rector.png" class="rounded-circle" alt="Principal's Signature" width="120">
+              <div class="ms-3 me-3">
                 <p class="mb-0 fw-bold">Rev. Fr. Dr. Nwafor Anthony Chijioke</p>
                 <p class="mb-0 text-muted">Rector</p>
               </div>
